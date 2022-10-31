@@ -1,0 +1,380 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+#info {
+  @include m.desktop {
+    flex-direction: row;
+    align-items: center;
+  }
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: v.$azul;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &::before {
+    @include m.desktop {
+      width: 50%;
+      clip-path: polygon(0 0, 63% 0, 100% 100%, 0% 100%);
+      height: 100vh;
+      left: 0;
+    }
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    background-color: v.$blanco;
+    clip-path: polygon(0 0, 100% 0%, 100% 45%, 0% 100%);
+    z-index: -1;
+  }
+  .caja-svg {
+    @include m.desktop {
+      width: 45%;
+    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      @include m.telefono {
+        width: 43rem;
+      }
+      @include m.tablet {
+        width: 50rem;
+      }
+      width: 33rem;
+      margin-left: 2rem;
+      #barra1 {
+        animation: barra1 linear 1.5s infinite alternate-reverse;
+      }
+      #barra2 {
+        animation: barra2 linear 1.5s infinite alternate-reverse;
+      }
+      @keyframes barra1 {
+        0% {
+          transform: translateX(10rem);
+        }
+        100% {
+          transform: translateX(-5rem);
+        }
+      }
+      @keyframes barra2 {
+        0% {
+          transform: translateX(-10rem);
+        }
+        100% {
+          transform: translateX(5rem);
+        }
+      }
+
+      #cabeza {
+        transform-origin: 50% 50%;
+        animation: cabeza 1s linear infinite alternate-reverse;
+      }
+      @keyframes cabeza {
+        0% {
+          transform: rotate(2deg);
+        }
+      }
+
+      #mano {
+        transform-origin: 20% 40%;
+        animation: mano 1s linear infinite alternate-reverse;
+      }
+      @keyframes mano {
+        0% {
+          transform: rotate(-5deg);
+        }
+        100% {
+          transform: rotate(5deg);
+        }
+      }
+
+      #brazoizq {
+        transform-origin: 70% 45%;
+        animation: brazoizq 2s linear infinite alternate-reverse;
+      }
+      @keyframes brazoizq {
+        0% {
+          transform: rotate(-7deg);
+        }
+      }
+    }
+  }
+  .datos {
+    @include m.desktop {
+      width: 60%;
+    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: v.$azul;
+    overflow-y: visible;
+    .h3 {
+      @include m.telefono {
+        font-size: 2rem !important;
+      }
+      @include m.desktop {
+        font-size: 2.5rem !important;
+      }
+      width: 100% !important;
+      margin: auto !important;
+      margin-bottom: 1rem !important;
+      text-transform: uppercase;
+      font-size: 1.5rem !important;
+      background-color: v.$blanco;
+      text-align: center;
+      padding: 1rem !important;
+      border-radius: 3rem !important;
+      border-top: 0.2rem solid #000;
+      border-left: 0.2rem solid #000;
+      box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.6) !important;
+      font-weight: bold;
+    }
+    .todo-datos {
+      @include m.telefono {
+        // font-size: 2rem !important;
+        width: 90% !important;
+      }
+      @include m.tablet {
+        width: 80% !important;
+      }
+      // @include m.desktop {
+      //   font-size: 2.5rem !important;
+      //   width: 70% !important;
+      // }
+      @include m.desktopXL {
+        width: 70% !important;
+      }
+      width: 90%;
+      .mov-carta {
+        @include m.telefono {
+          font-size: 2rem !important;
+          height: 25rem;
+        }
+        position: relative;
+        height: 20rem;
+        width: 100% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto !important;
+        gap: 2rem;
+        font-size: 1.5rem !important;
+        background-color: v.$blanco;
+        padding: 4rem 4rem;
+        border-radius: 3rem !important;
+        border-top: 0.2rem solid #000;
+        border-left: 0.2rem solid #000;
+        box-shadow: 2rem 2rem 5rem rgba(0, 0, 0, 0.6) !important;
+        #uno,
+        #dos {
+          display: flex;
+          flex-direction: column;
+          font-weight: 200;
+          justify-content: space-between;
+          flex: 50%;
+          p {
+            margin: 0;
+          }
+        }
+        #uno {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+    .caja-icon {
+      @include m.desktop {
+        width: 90%;
+        padding-bottom: 0;
+      }
+      @include m.desktopXXL {
+        width: 75%;
+      }
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      padding-bottom: 2rem;
+      .ene {
+        @include m.telefono {
+          width: 12rem;
+          height: 12rem;
+        }
+        @include m.desktop {
+          width: 10.5rem;
+          height: 10.5rem;
+        }
+        @include m.desktopXXL {
+          width: 14rem;
+          height: 14rem;
+        }
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .cajita-svg {
+          @include m.telefono {
+            width: 8rem;
+            height: 8rem;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          border: 0.2rem solid rgb(20, 18, 51);
+          background-color: rgb(20, 18, 51);
+          transition: 0.2s;
+          // overflow: hidden;
+          &:hover {
+            box-shadow: 0 0 1.5rem v.$blanco;
+            border: 0.2rem solid v.$blanco;
+            transform: scale(1.1);
+            cursor: pointer;
+            animation: none;
+          }
+          &:active {
+            @include m.tablet {
+              transform: translateY(1rem) scale(1) rotate(-20deg);
+              box-shadow: 0.5rem 0.5rem 1.5rem v.$blanco;
+            }
+          }
+          &:hover svg {
+            stroke: v.$blanco;
+            transform: scale(1.1);
+          }
+          svg {
+            @include m.telefono {
+              width: 6rem;
+            }
+            stroke: v.$gris;
+            transition: 0.2s;
+            width: 3rem;
+          }
+          &::before {
+            content: "10%";
+            position: absolute;
+            bottom: -3.5rem;
+            left: 0;
+            width: 100%;
+            height: 2rem;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            // z-index: 80;
+            transition: 0.5s;
+          }
+          &:hover::before {
+            bottom: -2.5rem;
+            color: v.$blanco;
+            font-size: 1.5rem;
+            text-shadow: 0.1rem 0.1rem 1rem rgb(255, 255, 255);
+            font-weight: bold;
+          }
+        }
+        .uno {
+          animation: sombra 1s infinite alternate-reverse;
+          &::before {
+            content: "90%";
+          }
+          // &:hover::before {
+          //   color: rgb(255, 98, 0);
+          //   text-shadow: 0.1rem 0.1rem 1rem rgb(255, 98, 0);
+          // }
+          // &:hover svg {
+          //   stroke: rgb(214, 110, 45);
+          // }
+          // &:hover {
+          //   box-shadow: 0 0 1.5rem rgb(255, 98, 0);
+          //   border: 0.2rem solid rgb(233, 113, 39);
+          // }
+        }
+        .dos {
+          animation: sombra 2s infinite alternate-reverse;
+          &::before {
+            content: "90%";
+          }
+          // &:hover::before {
+          //   color: rgb(255, 0, 230);
+          //   text-shadow: 0.1rem 0.1rem 1rem rgb(255, 0, 230);
+          // }
+          //   &:hover svg {
+          //     stroke: rgb(175, 59, 164);
+          //   }
+          //   &:hover {
+          //     box-shadow: 0 0 1.5rem rgb(255, 84, 238);
+          //     border: 0.2rem solid rgb(187, 54, 173);
+          //   }
+        }
+        .tres {
+          animation: sombra 2.5s infinite alternate-reverse;
+          &::before {
+            content: "50%";
+          }
+          // &:hover::before {
+          //   color: rgb(255, 255, 0);
+          //   text-shadow: 0.1rem 0.1rem 1rem rgb(255, 255, 0);
+          // }
+          // &:hover svg {
+          //   stroke: rgb(223, 223, 28);
+          // }
+          // &:hover {
+          //   box-shadow: 0 0 1.5rem rgb(255, 255, 0);
+          //   border: 0.2rem solid rgb(225, 225, 28);
+          // }
+        }
+        .cuatro {
+          animation: sombra 3s infinite alternate-reverse;
+          &::before {
+            content: "50%";
+          }
+          // &:hover::before {
+          //   color: rgb(0, 157, 255);
+          //   text-shadow: 0.1rem 0.1rem 1rem rgb(0, 157, 255);
+          // }
+          // &:hover svg {
+          //   stroke: rgb(56, 166, 235);
+          // }
+          // &:hover {
+          //   box-shadow: 0 0 1.5rem rgb(0, 157, 255);
+          //   border: 0.2rem solid rgb(32, 126, 184);
+          // }
+        }
+        .cinco {
+          animation: sombra 2s infinite;
+        }
+        .seis {
+          animation: sombra 4s infinite;
+        }
+        .siete {
+          animation: sombra 2s infinite;
+        }
+      }
+    }
+    @keyframes sombra {
+      0% {
+        box-shadow: 0 0 15px v.$gris;
+        border: 0.2rem solid v.$gris;
+        background-color: rgb(14, 11, 36);
+        transform: scale(1.1);
+      }
+    }
+    .caja-icon {
+      margin-top: 4rem;
+    }
+  }
+}

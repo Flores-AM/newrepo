@@ -1,0 +1,241 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 50;
+  font-size: 2.5rem;
+  // background-color: v.$azul;
+  .container-fluid {
+    height: 100%;
+    &:hover {
+      border-radius: 1rem;
+    }
+
+    #navbarNavAltMarkup {
+      // display: flex;
+      // align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+
+      .navbar-nav {
+        align-items: flex-end;
+        height: auto;
+        // background-color: v.$azul;
+        border-radius: 2rem;
+
+        a {
+          color: v.$blanco;
+          position: relative;
+          text-align: center;
+          height: 7rem;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          text-decoration: none;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.5rem;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            background-color: v.$blanco;
+            bottom: 0.8rem;
+            left: 0;
+            border-radius: 0.5rem;
+            transition: 0.5s;
+          }
+          &:hover::before {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+        .active::before {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    }
+
+    a {
+      margin-right: 2rem;
+      color: v.$negro;
+    }
+  }
+}
+
+.navContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // height: 10rem;
+  z-index: 50;
+  padding: 2rem 5rem;
+  background-color: #1f203a9a;
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+  &:hover {
+    background: v.$azul;
+  }
+
+  h2 {
+    color: v.$blanco;
+    font-weight: 400;
+
+    span {
+      font-weight: bold;
+    }
+  }
+  a {
+    color: v.$blanco;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .links {
+    position: absolute;
+    display: flex;
+    top: -70rem;
+    left: -200rem;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all 0.5s;
+
+    .a {
+      position: relative;
+      color: v.$blanco;
+      text-decoration: none;
+      margin-right: 2rem;
+      display: block;
+      padding: 1rem;
+      &.active {
+        color: v.$azul;
+        background: rgb(255, 255, 255);
+        backdrop-filter: blur(0.5rem);
+        border-radius: 2rem;
+      }
+    }
+    @include m.tablet {
+      position: initial;
+      margin: 0;
+      a {
+        color: v.$blanco;
+        display: inline;
+      }
+    }
+  }
+  .links.active {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 20rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.5s;
+
+    a {
+      @include m.tablet {
+        display: inline;
+      }
+      color: v.$blanco;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      width: 20rem;
+    }
+  }
+}
+
+/* BOTON BURGUER */
+
+.burger {
+  @include m.tablet {
+    display: none;
+  }
+}
+
+.nav-icon-5 {
+  width: 35px;
+  height: 30px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.nav-icon-5 span {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 2px;
+  transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+  height: 4px;
+  transition-duration: 500ms;
+}
+.nav-icon-5 span:nth-child(1) {
+  top: 0px;
+  left: 0px;
+}
+.nav-icon-5 span:nth-child(2) {
+  top: 13px;
+  left: 0px;
+  opacity: 1;
+}
+.nav-icon-5 span:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+}
+.nav-icon-5:not(.open):hover span:nth-child(1) {
+  transform: rotate(-3deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(2) {
+  transform: rotate(3deg) scaleY(1.1);
+}
+.nav-icon-5:not(.open):hover span:nth-child(3) {
+  transform: rotate(-4deg) scaleY(1.1);
+}
+.nav-icon-5.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+.nav-icon-5.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-icon-5.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
+}
+
+/* back-ground */
+
+.initial {
+  position: absolute;
+  background: rgba(22, 21, 44, 0.89);
+  top: -100%;
+  left: -100%;
+  width: 0;
+  height: 0;
+  backdrop-filter: blur(0.5rem);
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+  &.active {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    border-bottom-right-radius: 90%;
+  }
+}
