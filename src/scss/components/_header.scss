@@ -101,7 +101,7 @@
   }
   background: linear-gradient(rgb(234, 241, 255), v.$blanco);
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 8rem;
   overflow: hidden;
   .seccion {
     @include m.desktop {
@@ -146,7 +146,7 @@
       justify-content: flex-end;
       align-items: center;
       height: 50%;
-      margin-top: 7rem;
+      margin-top: 4rem;
       .btn-inicio {
         @include m.desktopXL {
           width: 20rem;
