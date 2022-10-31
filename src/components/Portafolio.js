@@ -4,10 +4,29 @@ import Title from "react-vanilla-tilt";
 function Portafolio() {
   return (
     <div id="body-cards">
-      <div className="bubble"></div>
-      <div className="bubble"></div>
-      <div className="bubble"></div>
-      <div className="container-cards">
+      <div
+        className="bubble"
+        data-aos="zoom-out-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        className="bubble"
+        data-aos="zoom-in-left"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      ></div>
+      <div
+        className="bubble"
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      ></div>
+      <div
+        className="container-cards"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+      >
         <Title className="card">
           <div className="content">
             <h2>01</h2>

@@ -85,9 +85,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: 0.5s;
+  transition: 0.5s !important;
   &:hover {
     background: v.$azul;
+    transition: 0.5s !important;
   }
 
   h2 {

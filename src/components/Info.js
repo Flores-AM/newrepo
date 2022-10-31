@@ -4,7 +4,7 @@ import Title from "react-vanilla-tilt";
 function Info() {
   return (
     <div id="info">
-      <div className="caja-svg">
+      <div className="caja-svg" data-aos="zoom-in" data-aos-duration="1500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="552"
@@ -236,7 +236,12 @@ function Info() {
           </Title>
         </div>
         <div className="caja-icon">
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-out-right"
+            data-aos-duration="1000"
+            data-aos-delay="550"
+          >
             <div className="cajita-svg uno">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +261,12 @@ function Info() {
               </svg>
             </div>
           </div>
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
             <div className="cajita-svg dos">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +286,12 @@ function Info() {
               </svg>
             </div>
           </div>
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="650"
+          >
             <div className="cajita-svg tres">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +312,12 @@ function Info() {
               </svg>
             </div>
           </div>
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-in-left"
+            data-aos-duration="1000"
+            data-aos-delay="700"
+          >
             <div className="cajita-svg cuatro">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +342,12 @@ function Info() {
               </svg>
             </div>
           </div>
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-in-up"
+            data-aos-duration="1000"
+            data-aos-delay="750"
+          >
             <div className="cajita-svg cinco">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -345,7 +370,12 @@ function Info() {
               </svg>
             </div>
           </div>
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="800"
+          >
             <div className="cajita-svg seis">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -368,7 +398,12 @@ function Info() {
               </svg>
             </div>
           </div>
-          <div className="ene">
+          <div
+            className="ene"
+            data-aos="zoom-in-left"
+            data-aos-duration="1000"
+            data-aos-delay="850"
+          >
             <div className="cajita-svg siete">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

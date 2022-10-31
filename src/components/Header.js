@@ -59,11 +59,36 @@ const Header = () => {
     <div className="header2">
       <div className="seccion">
         <div className="caja-titulo">
-          <h1 className="apellido">Flores</h1>
-          <h2 className="nombre">Agustin</h2>
+          <h1
+            className="apellido"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            Flores
+          </h1>
+          <h2
+            className="nombre"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="500"
+          >
+            Agustin
+          </h2>
           <div className="caja-titulo2">
-            <p className="año">'22</p>
-            <div className="caja-p">
+            <p
+              className="año"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
+              '22
+            </p>
+            <div
+              className="caja-p"
+              data-aos="fade-up-left"
+              data-aos-duration="1000"
+              data-aos-delay="700"
+            >
               <p>porta-</p>
               <p>folio</p>
             </div>
@@ -74,10 +99,13 @@ const Header = () => {
               onClick={cerrar}
               className="btn-inicio"
               to="info"
-              spy={true}
+              // spy={true}
               smooth={true}
               offset={0}
               duration={500}
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              data-aos-delay="2500"
             >
               Sobre mi
             </Link>
@@ -91,6 +119,9 @@ const Header = () => {
           viewBox="0 0 739 577"
           fill="none"
           className="svg-header"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          data-aos-delay="1200"
         >
           <g clip-path="url(#clip0_1_27)">
             <path

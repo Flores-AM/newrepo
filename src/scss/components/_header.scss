@@ -128,7 +128,8 @@
       font-size: 7rem;
       font-weight: 800;
       letter-spacing: 2rem;
-      animation: mov 3s linear infinite alternate-reverse;
+      animation: mov 3s 1.5s linear infinite alternate;
+      text-align: center;
     }
     h2 {
       @include m.desktopXXL {
@@ -138,7 +139,7 @@
       font-weight: 200;
       letter-spacing: 3rem;
       margin-bottom: 3rem;
-      animation: rot 2s linear infinite alternate-reverse;
+      animation: rot 2s 1.5s linear infinite alternate;
     }
     .caja-btn-inicio {
       display: flex;
@@ -167,7 +168,8 @@
         text-transform: uppercase;
         font-size: 1.6rem;
         letter-spacing: 0.5rem;
-        transition: 0.5s;
+        // transition: 0.5s;
+        // transition-delay: 0.8s;
         overflow: visible;
         text-decoration: none;
         cursor: pointer;
@@ -176,6 +178,8 @@
           // border: 0.1rem solid v.$azul;
           // width: 20.2rem;
           // height: 20.2rem;
+          transition: 0.5s;
+          // transition-delay: 1.8;
         }
         &::before {
           @include m.desktopXL {
@@ -205,13 +209,13 @@
         }
         &:hover::before {
           @include m.desktopXL {
-            width: 20rem;
-            height: 20rem;
+            width: 21rem;
+            height: 21rem;
             font-size: 2.2rem;
           }
-          width: 17rem;
-          height: 17rem;
-          transform: translate(0);
+          width: 18rem;
+          height: 18rem;
+          transform: translate(-0.5rem, -0.1rem);
           font-size: 1.8rem;
           transition: 0.5s;
           color: v.$azul;
@@ -309,11 +313,11 @@
 }
 @keyframes mov {
   0% {
-    transform: translateX(1rem);
+    transform: translateX(0);
     // transform: translateY(1rem);
   }
   50% {
-    transform: translateX(0);
+    transform: translateX(1rem);
     // transform: translateX(0);
     // transform: translateY(0);
   }
@@ -325,11 +329,11 @@
 }
 @keyframes rot {
   0% {
-    transform: rotate(1.5deg);
+    transform: rotate(0);
     // transform: translateY(1rem);
   }
   50% {
-    transform: rotate(0);
+    transform: rotate(1.5deg);
     // transform: translateX(0);
     // transform: translateY(0);
   }

@@ -14,7 +14,7 @@ const Nav = () => {
   };
 
   return (
-    <div>
+    <div data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1300">
       <div className="navContainer">
         <h2>
           Flores <span>WD</span>

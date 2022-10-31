@@ -11,7 +11,12 @@ const Contacto = () => {
     <div id="contacto">
       <section className="caja-contacto">
         <div className="container">
-          <div className="contactInfo">
+          <div
+            className="contactInfo"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+            data-aos-delay="200"
+          >
             <ul className="info">
               <h2>Informacion de Contacto</h2>
               <li>
@@ -60,7 +65,12 @@ const Contacto = () => {
               </li>
             </ul>
           </div>
-          <div className="contactForm">
+          <div
+            className="contactForm"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            data-aos-delay="300"
+          >
             <h2>Enviar Mensaje</h2>
             <div className="formBox">
               <div className="inputBox w50">

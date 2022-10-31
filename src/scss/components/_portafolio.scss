@@ -9,7 +9,7 @@
   min-height: 100vh;
   width: 100%;
   background: linear-gradient(v.$blanco, v.$degradado);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #body-cards::before {
   @include m.desktop {
