@@ -130,6 +130,7 @@
       letter-spacing: 2rem;
       animation: mov 3s 1.5s linear infinite alternate;
       text-align: center;
+      padding: 0;
     }
     h2 {
       @include m.desktopXXL {
@@ -141,14 +142,17 @@
       margin-bottom: 3rem;
       animation: rot 2s 1.5s linear infinite alternate;
       text-align: center;
+      padding: 0;
     }
     .caja-btn-inicio {
+      @include m.tablet {
+        margin-top: 4rem;
+      }
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       height: 50%;
-      // margin-top: 2rem;
       .btn-inicio {
         @include m.desktopXL {
           width: 20rem;
@@ -235,6 +239,7 @@
       font-weight: 800;
       margin: 0 3rem 0 0;
       text-align: center;
+      padding: 0;
     }
     .caja-p {
       display: flex;
@@ -250,6 +255,7 @@
         letter-spacing: 2rem;
         font-size: 3rem;
         text-align: center;
+        padding: 0;
       }
     }
   }
