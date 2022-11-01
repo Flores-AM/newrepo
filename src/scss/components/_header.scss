@@ -101,7 +101,7 @@
   }
   background: linear-gradient(rgb(234, 241, 255), v.$blanco);
   width: 100%;
-  padding-top: 8rem;
+  padding-top: 6rem;
   overflow: hidden;
   .seccion {
     @include m.desktop {
@@ -140,6 +140,7 @@
       letter-spacing: 3rem;
       margin-bottom: 3rem;
       animation: rot 2s 1.5s linear infinite alternate;
+      text-align: center;
     }
     .caja-btn-inicio {
       display: flex;
@@ -233,6 +234,7 @@
       font-size: 7rem;
       font-weight: 800;
       margin: 0 3rem 0 0;
+      text-align: center;
     }
     .caja-p {
       display: flex;
@@ -247,6 +249,7 @@
         text-transform: uppercase;
         letter-spacing: 2rem;
         font-size: 3rem;
+        text-align: center;
       }
     }
   }
