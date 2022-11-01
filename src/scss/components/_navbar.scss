@@ -72,6 +72,9 @@
 
 .navContainer {
   @include m.tablet {
+    padding: 1rem 5rem;
+  }
+  @include m.desktopXL {
     padding: 2rem 5rem;
   }
   position: fixed;
