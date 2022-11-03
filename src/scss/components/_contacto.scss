@@ -182,6 +182,23 @@
           &.w100 {
             width: 100%;
           }
+          &.enviar {
+            @include m.tablet {
+              display: flex;
+              text-align: left;
+            }
+            text-align: center;
+            p {
+              @include m.tablet {
+                margin: 0;
+              }
+              margin-left: 5rem;
+              color: rgb(127, 209, 72);
+              font-weight: 700;
+              font-size: 1.8rem;
+              margin-top: 2rem;
+            }
+          }
           input,
           textarea {
             width: 100%;
@@ -219,13 +236,18 @@
             background: v.$azul;
             color: v.$blanco;
             border: none;
-            max-width: 15rem;
+            max-width: 12rem;
+            padding: 1.5rem 0;
             border-radius: 1rem;
             transition: 0.3s;
             &:hover {
               background: v.$celeste;
               transform: scale(1.2);
             }
+          }
+          .error {
+            color: rgb(180, 40, 40);
+            font-size: 1.3rem;
           }
         }
       }
