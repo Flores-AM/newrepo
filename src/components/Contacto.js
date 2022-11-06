@@ -127,6 +127,8 @@ const Contacto = () => {
           >
             {({ errors }) => (
               <Form
+                action="correo.php"
+                method="POST"
                 className="contactForm"
                 data-aos="zoom-in"
                 data-aos-duration="1000"
