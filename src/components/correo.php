@@ -9,8 +9,8 @@
   $mensaje = $_POST['mensaje'];
 
   $header = "Enviado desde el portfolio FloresAM";
-  $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre;
+  $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre . "\nMi Email: " . $email . "\nMi Celular: " . $telefono;
 
-  mail($destinatario, $mensajeCompleto, $telefono, $email, $header);
+  mail($destinatario, $telefono, $mensajeCompleto, $header);
 
 ?>
